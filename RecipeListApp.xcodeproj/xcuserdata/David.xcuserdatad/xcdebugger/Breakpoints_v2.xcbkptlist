@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "002AB04A-AF06-4C50-B9A7-5EDE3F4645C7"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96792230-F5EC-41D2-A57D-19007849A3F6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecipeListApp/Services/DataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "getLocalData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38F5131A-7D96-4B23-B28C-C83B10A6DE06"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecipeListApp/Services/DataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "getLocalData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "38F5131A-7D96-4B23-B28C-C83B10A6DE06 - e5a66d92a4689055"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static RecipeListApp.DataService.getLocalData() -&gt; Swift.Array&lt;RecipeListApp.Recipe&gt;"
+                  moduleName = "RecipeListApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/David/Desktop/CWC%20Files/RecipeListApp/RecipeListApp/Services/DataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "229">
+               </Location>
+               <Location
+                  uuid = "38F5131A-7D96-4B23-B28C-C83B10A6DE06 - e5a66d92a4689055"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static RecipeListApp.DataService.getLocalData() -&gt; Swift.Array&lt;RecipeListApp.Recipe&gt;"
+                  moduleName = "RecipeListApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/David/Desktop/CWC%20Files/RecipeListApp/RecipeListApp/Services/DataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "517">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
