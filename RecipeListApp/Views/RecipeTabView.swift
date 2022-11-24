@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RecipeTabView: View {
+    
+    @EnvironmentObject var model: RecipeModel
+    
     var body: some View {
         
         TabView{
@@ -26,12 +29,14 @@ struct RecipeTabView: View {
                     }
                 }
         }
-        .environmentObject(RecipeModel())
+        
     }
 }
 
 struct RecipeTabView_Previews: PreviewProvider {
+   
     static var previews: some View {
         RecipeTabView()
+            .environmentObject(RecipeModel())
     }
 }
