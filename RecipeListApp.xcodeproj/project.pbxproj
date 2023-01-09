@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633CE4DC296101B100C0D946 /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633CE4DB296101B100C0D946 /* Rational.swift */; };
 		639F0AD82904C79C006F8D53 /* RecipeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F0AD72904C79C006F8D53 /* RecipeTabView.swift */; };
 		639F0B502908074C006F8D53 /* RecipeFeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F0B4F2908074C006F8D53 /* RecipeFeaturedView.swift */; };
 		63A7840928EFD27E00E71AD1 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A7840828EFD27E00E71AD1 /* RecipeDetailView.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		633CE4DB296101B100C0D946 /* Rational.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rational.swift; sourceTree = "<group>"; };
 		639F0AD72904C79C006F8D53 /* RecipeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTabView.swift; sourceTree = "<group>"; };
 		639F0B4F2908074C006F8D53 /* RecipeFeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeaturedView.swift; sourceTree = "<group>"; };
 		63A7840828EFD27E00E71AD1 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
@@ -46,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		633CE4DA2961008000C0D946 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				633CE4DB296101B100C0D946 /* Rational.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		63DABBAA28EA2C91004D8AA5 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 				63DABBC828EA2D60004D8AA5 /* Services */,
 				63DABBC728EA2D58004D8AA5 /* Data */,
 				63DABBBA28EA2C93004D8AA5 /* Assets.xcassets */,
+				633CE4DA2961008000C0D946 /* Utilities */,
 				63DABBBC28EA2C94004D8AA5 /* Preview Content */,
 			);
 			path = RecipeListApp;
@@ -201,6 +212,7 @@
 			files = (
 				63DABBB928EA2C91004D8AA5 /* RecipeListView.swift in Sources */,
 				63A7840928EFD27E00E71AD1 /* RecipeDetailView.swift in Sources */,
+				633CE4DC296101B100C0D946 /* Rational.swift in Sources */,
 				63DABBCF28EA34D8004D8AA5 /* RecipeModel.swift in Sources */,
 				63DABBCC28EA3046004D8AA5 /* Recipe.swift in Sources */,
 				63DABBB728EA2C91004D8AA5 /* RecipeListApp.swift in Sources */,

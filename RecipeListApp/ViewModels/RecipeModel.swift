@@ -35,4 +35,86 @@ class RecipeModel: ObservableObject {
     }
     
     
+    static func getPortion(ingredient: Ingredient, recipeServings: Int, targetServings: Int) -> String {
+        
+        var portion = ""
+        var numererator = ingredient.num ?? 1
+        var denominator = ingredient.denom ?? 1
+        var wholePortions = 0
+        if ingredient.num != nil {
+           
+            // Get a single serving size by multiplying the denominator by the recipie servings
+            
+            denominator *= recipeServings
+            
+            // Get target portion by multiplying numerator by target servings
+            
+            numererator *= targetServings
+            
+            // Reduce fraction by greatest common devisor
+            
+            let divisor = Rational.greatestCommonDivisor(numererator, denominator)
+            numererator /= divisor
+            denominator /= divisor
+            
+            // Get whole portion if numerator is greater than denominator
+            
+            if numererator >= denominator {
+                
+                // calculate the whole portions
+                
+                wholePortions = numererator / denominator
+                
+                
+                // calculate the remainder
+                numererator = numererator % denominator
+                
+                // assign to portion string
+                
+                portion += (String(wholePortions) + " ")
+             
+                
+            }
+            
+            // Get remainder portion and express as a fraction
+            
+            if numererator > 0 {
+                
+                // assign the remainder as fraction to the portion string
+                
+                //portion += wholePortions > 0 ? " " : ""
+                
+                portion += String(numererator)
+                portion += "/"
+                portion += (String(denominator) + " ")
+                
+            }
+        }
+        
+        if var unit = ingredient.unit {
+            
+       
+            
+            // check if we need to pleuralize
+            if wholePortions > 1 {
+                
+                if unit.suffix(2) == "ch" {
+                  unit += "es"
+                } else if unit.suffix(1) == "f" {
+                    unit = String(unit.dropLast())
+                    unit += "ves"
+                    
+                } else {
+                    unit += "s"
+                }
+                
+            }
+            
+            // calculate appropiate unit
+            return portion + unit
+            
+        }
+        
+        return portion 
+    }
 }
