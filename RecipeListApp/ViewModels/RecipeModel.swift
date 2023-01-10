@@ -38,7 +38,7 @@ class RecipeModel: ObservableObject {
     static func getPortion(ingredient: Ingredient, recipeServings: Int, targetServings: Int) -> String {
         
         var portion = ""
-        var numererator = ingredient.num ?? 1
+        var numerator = ingredient.num ?? 1
         var denominator = ingredient.denom ?? 1
         var wholePortions = 0
         if ingredient.num != nil {
@@ -49,25 +49,25 @@ class RecipeModel: ObservableObject {
             
             // Get target portion by multiplying numerator by target servings
             
-            numererator *= targetServings
+            numerator *= targetServings
             
             // Reduce fraction by greatest common devisor
             
-            let divisor = Rational.greatestCommonDivisor(numererator, denominator)
-            numererator /= divisor
+            let divisor = Rational.greatestCommonDivisor(numerator, denominator)
+            numerator /= divisor
             denominator /= divisor
             
             // Get whole portion if numerator is greater than denominator
             
-            if numererator >= denominator {
+            if numerator >= denominator {
                 
                 // calculate the whole portions
                 
-                wholePortions = numererator / denominator
+                wholePortions = numerator / denominator
                 
                 
                 // calculate the remainder
-                numererator = numererator % denominator
+                numerator = numerator % denominator
                 
                 // assign to portion string
                 
@@ -78,13 +78,13 @@ class RecipeModel: ObservableObject {
             
             // Get remainder portion and express as a fraction
             
-            if numererator > 0 {
+            if numerator > 0 {
                 
                 // assign the remainder as fraction to the portion string
                 
                 //portion += wholePortions > 0 ? " " : ""
                 
-                portion += String(numererator)
+                portion += String(numerator)
                 portion += "/"
                 portion += (String(denominator) + " ")
                 
@@ -96,19 +96,25 @@ class RecipeModel: ObservableObject {
        
             
             // check if we need to pleuralize
-            if wholePortions > 1 {
+            if (wholePortions == 1 && numerator > 0)  ||  wholePortions > 1  {
                 
                 if unit.suffix(2) == "ch" {
-                  unit += "es"
+                    
+                    unit += "es"
+                    
                 } else if unit.suffix(1) == "f" {
+                    
                     unit = String(unit.dropLast())
                     unit += "ves"
                     
                 } else {
+                    
                     unit += "s"
+                    
                 }
-                
             }
+                
+            
             
             // calculate appropiate unit
             return portion + unit
