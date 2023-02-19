@@ -27,7 +27,7 @@ struct RecipeDetailView: View {
                     .resizable()
                     .scaledToFill()
                 
-                // Mark: Recipie Title
+                // MARK: Recipie Title
                 
                 Text(recipe.name)
                    
@@ -93,7 +93,7 @@ struct RecipeDetailView: View {
                 
             }
         }
-        .navigationBarTitle(recipe.name)
+        //.navigationBarTitle(recipe.name)
     }
 }
 
